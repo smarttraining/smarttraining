@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:smarttraining"
+             x:Class="smarttraining.Registration">
+
+    <StackLayout x:Name="registration" Spacing="20" Padding="30, 0"  BackgroundColor="#fff" >
+        <StackLayout.Children>
+            <Entry x:Name="Email" PlaceholderColor="Gray" Placeholder="Email" TextColor="Black" Margin="0, 150, 0, 0"  />
+            <Entry x:Name="Password" PlaceholderColor="Gray" Placeholder="Пароль" TextColor="Black" IsPassword="True"/>
+            <Entry x:Name="PasswordCheck" PlaceholderColor="Gray" Placeholder="Повторите пароль" TextColor="Black" IsPassword="True"/>
+
+            <Button  Text="Зарегистрироаться" Clicked="Reg" Margin="0,30, 0,0" BackgroundColor="#68B436" TextColor="White" />
+           
+        </StackLayout.Children>
+    </StackLayout>
+</ContentPage>

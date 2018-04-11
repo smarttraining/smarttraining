@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:smarttraining"
+             x:Class="smarttraining.MainPage"
+             
+              Title = "Login" x:Name="loginPg"
+             
+            >
+
+    <StackLayout x:Name="stackLayout" Spacing="10" BackgroundColor="#fff" >
+        <StackLayout x:Name="stackLayoutA"  Padding="30, 0" Spacing="10" BackgroundColor="#fff" >
+
+
+            <Image x:Name="Image1"  Source="HomeGif.gif"   HorizontalOptions="Center" HeightRequest="100" Margin="0,80, 0,0"/>
+
+
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="0, 50, 0, 0" >
+                <Image Source="profuser.png" Scale="0.7"></Image>
+                <Entry x:Name="Email" Placeholder="Введите почту"  PlaceholderColor="#BDBDBD"  TextColor="Black" HorizontalOptions="FillAndExpand" ></Entry>
+            </StackLayout>
+
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Image Source="key.png" Scale="0.7"></Image>
+                <Entry x:Name="Password" Placeholder="Введите пароль" PlaceholderColor="#BDBDBD" IsPassword="True"  TextColor="Black" HorizontalOptions="FillAndExpand"  Text=""></Entry>
+            </StackLayout>
+
+
+            
+
+            <!-- TO Home.xaml -->
+            <Button x:Name="LoginButton"  Text="Войти" Clicked="Go_login"  BackgroundColor="#68B436" TextColor="White"  Margin="0,30, 0,0" />
+
+        <!-- To somewhere -->
+            <Button  Text="Забыли пароль?" FontSize="10"  BackgroundColor="#fff"  TextColor="Black"  Clicked="Go_reg" />
+        </StackLayout>
+        <!-- TO registration.xaml  -->
+       <StackLayout x:Name="stackLayoutB"  Spacing="10" BackgroundColor="#fff" VerticalOptions="EndAndExpand">
+            <Button Text="Нет аккаунта? Зарегистрируйся" FontSize="10"  BackgroundColor="#fff"  TextColor="Black"  Clicked="Go_reg"  HorizontalOptions="Fill" VerticalOptions="EndAndExpand"/>
+            </StackLayout>
+        </StackLayout>
+
+</ContentPage>

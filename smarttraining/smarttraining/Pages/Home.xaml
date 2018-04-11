@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+         x:Class="smarttraining.Home">
+    <!-- Менюшка -->
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="≡" BackgroundColor="#FFF" Padding="0" >
+
+            <ContentPage.Content>
+                <StackLayout Spacing="0">
+                    <StackLayout BackgroundColor="#90A4AE"
+                     HeightRequest="150">
+
+                       
+                    
+                    <Grid HorizontalOptions="Start" ColumnSpacing="0" RowSpacing="0" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40*" />
+                            <ColumnDefinition Width="60*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="5*"/>
+                        </Grid.RowDefinitions>
+                      
+                                <controls:CircleImage x:Name="Image1"     HeightRequest = "100" WidthRequest = "100"  BorderThickness="3"  HorizontalOptions="Center"  Aspect="AspectFill" Margin="0,25, 0,0">
+                                </controls:CircleImage>
+                         
+                            <!--<Image x:Name="Image1" Source="profile.jpg" Grid.Column="0" Grid.Row="0" HeightRequest="100" Margin="0,0,20,0"/>-->
+
+                        <Grid  ColumnSpacing="0" RowSpacing="0" Grid.Column="1" Grid.Row="0" Padding="10,40">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+
+                                </Grid.ColumnDefinitions>
+
+                                <Grid.RowDefinitions>
+                                <RowDefinition Height="33*"/>
+                                <RowDefinition Height="33*"/>
+                                <RowDefinition Height="33*"/>
+
+                            </Grid.RowDefinitions>
+
+
+                            <Label x:Name="NameFn" Text="" Grid.Column="0" Grid.Row="0"  VerticalOptions="Start"/>
+                            <Label x:Name="NameSn" Text="" Grid.Column="0" Grid.Row="1" VerticalOptions="Center" />
+                            <Label x:Name="NamePn" Text="" Grid.Column="0" Grid.Row="2" VerticalOptions="End" />
+
+
+
+                        </Grid>
+                    </Grid>
+                    </StackLayout>
+                    <!--<ContentPage.Resources>
+                        <ResourceDictionary>
+                            <x:Array x:Key="phones" Type="{x:Type Button}">
+                                <Button Text="iPhone 7" />
+                                <Button Text="HP Elite z3"/>
+                                <Button Text="Huawei P10 "/>
+                                <Button Text="Xiaomi Mi6 "/>
+                            </x:Array>
+                        </ResourceDictionary>
+                    </ContentPage.Resources>-->
+                    <!--<StackLayout>
+                        <ListView x:Name="phonesList" ItemsSource="{StaticResource Key=phones}" />
+                    </StackLayout>-->
+
+
+                    <ListView x:Name="navigationDrawerList"
+                  RowHeight="60"
+                  SeparatorVisibility="Default"
+                  BackgroundColor="#FFF"
+                  ItemSelected="OnMenuItemSelected"
+                              
+                 
+          >  
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+
+                                    <!-- Main design for our menu items -->
+                                    <StackLayout VerticalOptions="FillAndExpand"
+                                         Orientation="Horizontal"
+                                         Padding="20,10,0,10"
+                                         Spacing="20">
+
+                                         <Image Source="{Binding Icon}"
+                                     WidthRequest="20"
+                                     HeightRequest="20"
+                                     VerticalOptions="Center" />
+
+                                        <Label Text="{Binding Title}"
+                                     FontSize="Small"
+                                     VerticalOptions="Center"
+                                     TextColor="Black">
+                                            <Label.GestureRecognizers>
+                                                <TapGestureRecognizer  Tapped="OnLabelClicked"/>
+                                            </Label.GestureRecognizers>
+                                        </Label>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+
+
+
+                    <!--<Button BorderWidth="0" BorderRadius="0" Text="Тренинги" Clicked="Go_Events"  BorderColor="White" TextColor="Black" Margin="0,40,0,0"  BackgroundColor="#fff" />
+                    <Button BorderWidth="0" BorderRadius="0" Text="Мои События" Clicked="Go_MyEvents" BorderColor="White" TextColor="Black" Margin="0,0,0,0"  BackgroundColor="#fff" />
+                    <Button BorderWidth="0" BorderRadius="0" Text="Избранное" BorderColor="White" TextColor="Black" Margin="0,0,0,0" BackgroundColor="#fff" />
+                    --><!--<Button Text="Категории"   BorderColor="White" TextColor="Black" Margin="0,0,0,0"  BackgroundColor="#fff" />
+                    <Button Text="Профиль"   BorderColor="White" TextColor="Black" Margin="0,0,0,0"  BackgroundColor="#fff" />
+                    <Button Text="Настройки"   BorderColor="White" TextColor="Black" Margin="0,0,0,0"  BackgroundColor="#fff" Clicked="Go_Settings"/>
+                    <Button Text="О программе"   BorderColor="White" TextColor="Black" Margin="0,0,0,0"  BackgroundColor="#fff" Clicked="Go_About" />--><!--
+                    <Button Text="Войти" x:Name="enterBtn"      Clicked="Go_MainPage" BorderColor="White" TextColor="Black" Margin="0,0,0,0" BackgroundColor="#fff" />-->
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+
+    <MasterDetailPage.Detail>
+        <ContentPage Title="Detail" BackgroundColor="#FFF" >
+
+            <ContentPage.Content>
+                <StackLayout >
+
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

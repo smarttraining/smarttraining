@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="smarttraining.Registration2">
+    <ScrollView>
+        
+        <StackLayout x:Name="stackLayout" Spacing="12" Padding="50, 0" BackgroundColor="#fff" >
+            <StackLayout.Children>
+
+                <Entry  x:Name="Name" PlaceholderColor="Gray" FontSize="12" Placeholder="Имя" TextColor="Black" Margin="0, 50, 0, 0" />
+                <Entry  x:Name="Lname" PlaceholderColor="Gray" FontSize="12" Placeholder="Фамилия" TextColor="Black" />
+                <Entry  x:Name="Pname" PlaceholderColor="Gray" FontSize="12" Placeholder="Отчество" TextColor="Black" />
+                <Entry  x:Name="Sex" PlaceholderColor="Gray" FontSize="12" Placeholder="Пол" TextColor="Black"  />
+                <Label Text="Выберите дату:"/>
+                <DatePicker Format="dd/MM/yyyy" />
+                <!--<Entry  x:Name="Date" PlaceholderColor="Gray" FontSize="12" Placeholder="Дата рождения" TextColor="Black" />-->
+                <Entry  x:Name="Number" PlaceholderColor="Gray" FontSize="12" Placeholder="Сотовый номер" TextColor="Black" />
+                <Entry  x:Name="Adress" PlaceholderColor="Gray" FontSize="12" Placeholder="Адрес" TextColor="Black" />
+
+                <Button  Text="Отправить" Clicked="Reg2" Margin="0,60, 0,0" BackgroundColor="#68B436" TextColor="White" />
+
+       
+
+            </StackLayout.Children>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
